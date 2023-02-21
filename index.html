@@ -72,22 +72,21 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 80%;
+      width: 85%;
+      height: 75%;
     }
     .main-description{
-      justify-self: center;
-      width: 60%;
+      width: 55%;
+      height: 90%;
+      padding: 1em;
       display: flex;
       align-items: flex-start;
+      justify-content: space-around;
       flex-direction: column;
-    }
-    .main-description > *{
-      margin-bottom: 3em;
     }
     .main-title{
       color: var(--color-black);
       font-size: 62px;
-      margin-bottom: 1em;
     }
     .learn{
       background-color: var(--color-black);
@@ -98,6 +97,7 @@
       padding: 1em;
       border-radius: .5em;
       border: none;
+      margin-bottom: 2em;
     }
     button:hover{
       color: var(--color-black);
@@ -117,7 +117,9 @@
       align-items: center;
     }
     .main-image{
-      width: 40%;
+      width: 45%;
+      height: 90%;
+      object-fit: cover;
     }
     .dropdown2, .dropdown1{
       position: relative;
@@ -155,7 +157,7 @@
     <div class="nav-bar">
       <img src="images/logo.svg" alt="Logo">
       <div class="dropdown1">
-        <a href="" class="features">Features <img src="images/icon-arrow-down.svg" alt="" class="icon">
+        <a href="#" class="features">Features <img src="images/icon-arrow-down.svg" alt="" class="icon">
           <img src="images/icon-arrow-up.svg" alt="" class="icon1"></a>
         <div class="dropdown-list1">
           <a href="#"><img src="images/icon-todo.svg" alt=""> Todo List</a>
