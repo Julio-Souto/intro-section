@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    :root{
+      --color-white: hsl(0, 0%, 98%);
+      --color-gray: hsl(0, 0%, 41%);
+      --color-black: hsl(0, 0%, 8%);
+    }
+    body{
+      margin: 0;
+      font-size: 18px;
+      font-family: 'Epilogue', sans-serif;
+      height: 100vh;
+      width: 100vw;
+      box-sizing: border-box;
+      color: var(--color-gray);
+    }
+    h1,p{
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color: var(--color-gray);
+    }
+    .container{
+      display: grid;
+      grid-template-rows: auto 1fr;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+    }
+    .header{
+      display: flex;
+      justify-content: space-between;
+    }
+    .nav-bar{
+      width: 50%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    .login{
+      font-family: 'Epilogue', sans-serif;
+      font-weight: bold;
+      border: none;
+      background-color: white;
+      color: var(--color-gray);
+      padding: 1em;
+    }
+    .register{
+      font-family: 'Epilogue', sans-serif;
+      font-weight: bold;
+      background-color: white;
+      border: 1px solid var(--color-gray);
+      border-radius: 1em;
+      color: var(--color-gray);
+      padding: 1em;
+    }
+    .main-content{
+      justify-self: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 80%;
+    }
+    .main-description{
+      justify-self: center;
+      width: 60%;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+    .main-description > *{
+      margin-bottom: 3em;
+    }
+    .main-title{
+      color: var(--color-black);
+      font-size: 62px;
+      margin-bottom: 1em;
+    }
+    .learn{
+      background-color: var(--color-black);
+      color: var(--color-white);
+      font-size: 18px;
+      font-family: 'Epilogue', sans-serif;
+      font-weight: bold;
+      padding: 1em;
+      border-radius: .5em;
+      border: none;
+    }
+    button:hover{
+      color: var(--color-black);
+      background-color: white;
+    }
+    .learn,.register{
+      border: 1px solid var(--color-black);
+    }
+    a:hover{
+      color: var(--color-black);
+    }
+    .sponsors{
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5em;
+      align-items: center;
+    }
+    .main-image{
+      width: 40%;
+    }
+    .dropdown2, .dropdown1{
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-list2, .dropdown-list1{
+      display: none;
+      position: absolute;
+      min-width: 160px;
+      background-color: aliceblue;
+      border-radius: .5em;
+      padding: .5em;
+    }
+    .dropdown-list1 a, .dropdown-list2 a{
+      display: block;
+      margin: 1em .5em;
+    }
+    .dropdown2:hover .dropdown-list2, .dropdown1:hover .dropdown-list1{
+      display: block;
+    }
+    .dropdown2:hover .icon, .dropdown1:hover .icon{
+      display: none;
+    }
+    .icon1{
+      display: none;
+    }
+    .dropdown2:hover .icon1, .dropdown1:hover .icon1{
+      display: inline;
+    }
+  </style>
+</head>
+<body class="container">
+
+  <div class="header">
+    <div class="nav-bar">
+      <img src="images/logo.svg" alt="Logo">
+      <div class="dropdown1">
+        <a href="" class="features">Features <img src="images/icon-arrow-down.svg" alt="" class="icon">
+          <img src="images/icon-arrow-up.svg" alt="" class="icon1"></a>
+        <div class="dropdown-list1">
+          <a href="#"><img src="images/icon-todo.svg" alt=""> Todo List</a>
+          <a href="#"><img src="images/icon-calendar.svg" alt=""> Calendar</a>
+          <a href="#"><img src="images/icon-reminders.svg" alt=""> Reminders</a>
+          <a href="#"><img src="images/icon-planning.svg" alt=""> Planning</a>
+        </div>
+      </div>
+      <div class="dropdown2">
+        <a href="#" class="company">Company <img src="images/icon-arrow-down.svg" alt="" class="icon">
+          <img src="images/icon-arrow-up.svg" alt="" class="icon1"></a>
+        <div class="dropdown-list2">
+          <a href="#">History</a>
+          <a href="#">Our team</a>
+          <a href="#">Blog</a>
+        </div>
+      </div>
+      <a href="" class="careers">Careers</a>
+      <a href="" class="about">About</a>
+    </div>
+    <div class="sign-in">
+      <button class="login">Login</button>
+      <button class="register">Register</button>
+    </div>
+  </div>
+
+  <div class="main-content">
+    <div class="main-description">
+      <h1 class="main-title">Make remote work</h1>
+      <p class="description">
+        Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.
+      </p>
+      <button class="learn">Learn more</button>
+      <div class="sponsors">
+        <img src="images/client-databiz.svg" alt="databiz">
+        <img src="images/client-audiophile.svg" alt="audiophile">
+        <img src="images/client-meet.svg" alt="meet">
+        <img src="images/client-maker.svg" alt="maker">
+      </div>
+    </div>
+    <img src="images/image-hero-desktop.png" alt="Main Image" class="main-image">
+  </div>
+  
+</body>
+</html>
